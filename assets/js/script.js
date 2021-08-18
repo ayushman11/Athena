@@ -1,11 +1,11 @@
 $(document).ready(function () {
   $(window).scroll(function () {
     if (this.scrollY > 20) {
-      $(".navbar").addClass("sticky");
-      $(".navbar").addClass("sticky-shadow");
+      $(".navigation").addClass("sticky");
+      $(".navigation").addClass("sticky-shadow");
     } else {
-      $(".navbar").removeClass("sticky");
-      $(".navbar").removeClass("sticky-shadow");
+      $(".navigation").removeClass("sticky");
+      $(".navigation").removeClass("sticky-shadow");
     }
   });
 
