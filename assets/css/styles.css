@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+/* ========== CONTENT STYLING ========= */
+section {
+  padding: 100px 0;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: #80d3e1;
+  padding: 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.courses {
+  font-family: "Poppins", sans-serif;
+}
+/* ========== BUTTON ============ */
+.button-icon {
+  transition: 0.3s;
+}
+/* ========== NAVBAR ============ */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 999;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: linear-gradient(-90deg,#6dd5ed, #2193b0);
+}
+
+navbar.sticky-shadow{
+  box-shadow: 0 -1px 4px rgba(4, 78, 121, 0.158);
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #80d3e1;
+  font-size: 35px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a {
+  color: #fff;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #80d3e1;
+}
+
+/* ========== HOME ============ */
+.home {
+  display: flex;
+  background: url("../images/home1.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .heading-primary {
+  cursor: default;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .heading-2 {
+  cursor: default;
+  font-size: 45px;
+  font-weight: 500;
+  margin-left: -3px;
+}
+
+.home .home-content .heading-secondary a {
+  color: #fff;
+  position: relative;
+  bottom: -200px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: -3px;
+}
+
+.home .home-content .heading-secondary:hover .button-icon {
+  transform: translateX(4px);
+}
+
+/* ==================== CLUBS ====================== */
+
+
+.clubs{
+  background: #fff;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.clubs .max-width {
+  margin: 100px 0 auto 40px;
+}
+
+.clubs .home-content .heading-primary {
+  cursor: default;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.clubs .home-content .heading-2 {
+  cursor: default;
+  font-size: 45px;
+  font-weight: 500;
+  margin-left: -3px;
+}
+
+.clubs .home-content .heading-secondary a {
+  position: relative;
+  bottom: -200px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: -3px;
+}
+
+.clubs .home-content .heading-secondary:hover .button-icon {
+  transform: translateX(4px);
+}
+
+/* ======== COURSES =========== */
+
+.courses .title::after {
+  content: "Most Popular";
+}
+
+.courses .carousel .card {
+  cursor: pointer;
+  background: #fff;
+  /* border-radius: 6px; */
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.courses .carousel .card:hover {
+  background: #80d3e1;
+}
+
+.courses .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.courses .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.courses .carousel .card .course-title {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.courses .carousel .card img {
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid #80d3e1;
+  transition: all 0.3s ease;
+}
+
+.courses .carousel .card:hover img {
+  border-color: #fff;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #80d3e1 !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #80d3e1 !important;
+}
+
+/* ====================== SWIPER SLIDE ====================== */
+
+.swiper-container {
+  width: 100%;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+}
+
+.swiper-slide {
+  /* background: url(../images/fourthwall.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide img{
+  display: block;
+  width: 100%;
+}
+
+
+/* ============================== FOOTER ===================== */
+
+.footer {
+  padding-top: 2rem;
+}
+
+.footer_container {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 768px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3.5rem;
+}
+
+.footer_bg {
+  background-color: #2193b0;
+  padding: 3rem 0 3.5rem;
+}
+
+.footer_title {
+  font-size: 2.25rem;
+  margin-bottom: .25rem;
+}
+
+.footer_subtitle {
+  font-size: .875rem;
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+}
+
+.footer_links:hover {
+  color: #a19fad;
+}
+
+.footer_socials {
+  justify-self: flex-end;
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.footer_social:hover {
+  color: #a19fad;
+}
+
+.footer_copy {
+  font-size: 0.813rem;
+  text-align: center;
+  color: #e3e2e9;
+  margin-top: 4.5rem;
+}
+
+.footer_title,
+.footer_subtitle,
+.footer_social,
+.footer_link {
+  color: #fff;
+}
+
+
+/* ======================= SCROLL UP ======================= */
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: #2193b0;
+  opacity: 0.8;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+.scrollup:hover {
+  background-color: #13738b;
+}
+
+.scrollup_icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* show scroll */
+.show-scroll {
+  bottom: 5rem;
+}
+
+/* ========================== SCROLL BAR ===================== */
+::-webkit-scrollbar{
+  width: .60rem;
+  background-color: #e3e2e9;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #c8c6d2;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #a19fad;
+}
