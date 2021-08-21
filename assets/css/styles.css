@@ -309,8 +309,8 @@ navigation.sticky-shadow {
 
 /*======================== RESUSABLE CSS CLASSES  =========================*/
 
-.section {
-  padding: 100px 0 ;
+section {
+  padding: 70px 0;
 }
 
 .section_title {
@@ -415,7 +415,22 @@ navigation.sticky-shadow {
 
 
 
-/* ====================== WAVES ============================== */
+/* ====================== VIDEO ============================== */
+
+ /* .video{
+  position: relative;
+  width: 100%;
+  padding: 56.25%;
+  height: 0;
+} */
+
+.video iframe{
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 20rem;
+}
 
 /* ====================== SWIPER SLIDE ====================== */
 
@@ -442,9 +457,6 @@ navigation.sticky-shadow {
 
 /* ============================== FOOTER ===================== */
 
-.foot {
-  padding-top: 10rem;
-}
 
 .footer_container {
   display: grid;
