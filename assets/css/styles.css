@@ -32,9 +32,6 @@ ul {
   margin: auto;
 }
 /* ========== CONTENT STYLING ========= */
-section {
-  padding: 100px 0;
-}
 
 section .title {
   position: relative;
@@ -313,7 +310,7 @@ navigation.sticky-shadow {
 /*======================== RESUSABLE CSS CLASSES  =========================*/
 
 .section {
-  padding: 2rem 0 4rem;
+  padding: 100px 0 ;
 }
 
 .section_title {
@@ -348,6 +345,9 @@ navigation.sticky-shadow {
   content: "Categories";
 }
 
+.all-courses .title::after{
+  content: "Clubs";
+}
 
 .skills_container {
   row-gap: 1.5rem;
@@ -443,7 +443,7 @@ navigation.sticky-shadow {
 /* ============================== FOOTER ===================== */
 
 .foot {
-  padding-top: 2rem;
+  padding-top: 10rem;
 }
 
 .footer_container {
