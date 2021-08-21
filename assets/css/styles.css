@@ -310,6 +310,111 @@ navigation.sticky-shadow {
   border: 3px solid var(--main-color);
 }
 
+/*======================== RESUSABLE CSS CLASSES  =========================*/
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section_title {
+  font-size: 1.5rem;
+}
+
+.section_subtitle {
+  display: block;
+  font-size: .875rem;
+  margin-bottom: 3rem;
+}
+
+.section_title,
+.section_subtitle {
+  text-align: center;
+}
+
+
+/* =========================== SKILLS ========================= */
+.grid{
+  display: grid;
+  gap: 2rem;
+}
+
+.container {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills .title::after{
+  content: "Categories";
+}
+
+
+.skills_container {
+  row-gap: 1.5rem;
+}
+
+.skills_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.skills_icon,
+.skills_arrow {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.skills_icon {
+  margin-right: .75rem;
+}
+
+.skills_title {
+  font-size: 1.125rem;
+}
+
+.skills_subtitle {
+  font-size: .813rem;
+  color: var(--main-dark-color);
+}
+
+.skills_arrow {
+  margin-left: auto;
+  transition: 0.6s;
+}
+
+.skills_list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skills_titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+.skills_name {
+  font-size: 1rem;
+}
+
+.skills_close .skills_list {
+  height: 0;
+  overflow: hidden;
+}
+
+.skills_open .skills_list {
+  height: max-content;
+  margin-bottom: 2.5rem;
+}
+
+.skills_open .skills_arrow {
+  transform: rotate(180deg);
+}
+
+
+
 /* ====================== WAVES ============================== */
 
 /* ====================== SWIPER SLIDE ====================== */
@@ -442,4 +547,10 @@ navigation.sticky-shadow {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a19fad;
+}
+
+@media screen and (min-width: 568px) {
+  .skills_container{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
