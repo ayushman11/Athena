@@ -2,17 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Adminto - Responsive Admin Dashboard Template</title>
+        <title>Athena</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-
+        
         <!-- UNICONS -->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
 
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -24,7 +18,7 @@
     <body class="authentication-bg">
 
         <div class="home-btn d-none d-sm-block">
-            <a href="index.html"><i class="uil uil-home h2 text-light"></i></a>
+            <a href="/"><i class="uil uil-home h2 text-light"></i></a>
         </div>
 
         <div class="account-pages mt-5 mb-5">
@@ -32,7 +26,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="text-center">
-                            <a href="index.html">
+                            <a href="/">
                                 <span><img src="assets/images/logo-dark.png" alt="" height="22"></span>
                             </a>
                             <h2 class="text-light mt-2 mb-4">Athena</h2>
@@ -42,31 +36,30 @@
                             <div class="card-body p-4">
                                 
                                 <div class="text-center mb-4">
-                                    <h4 class="text-uppercase mt-0">Register</h4>
+                                    <h4 class="text-uppercase mt-0">Sign In</h4>
                                 </div>
 
-                                <form action="#">
+                                <form action="/">
 
-                                    <div class="form-group">
-                                        <label for="fullname">Full Name</label>
-                                        <input class="form-control" type="text" id="fullname" placeholder="Enter your name" required>
-                                    </div>
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="email" id="emailaddress" required placeholder="Enter your email">
+                                        <input class="form-control" type="email" id="emailaddress" required="" placeholder="Enter your email">
                                     </div>
-                                    <div class="form-group">
+
+                                    <div class="form-group mb-3">
                                         <label for="password">Password</label>
-                                        <input class="form-control" type="password" required id="password" placeholder="Enter your password">
+                                        <input class="form-control" type="password" required="" id="password" placeholder="Enter your password">
                                     </div>
-                                    <div class="form-group">
+
+                                    <div class="form-group mb-3">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkbox-signup">
-                                            <label class="custom-control-label" for="checkbox-signup">I accept <a href="javascript: void(0);" class="text-dark">Terms and Conditions</a></label>
+                                            <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked>
+                                            <label class="custom-control-label" for="checkbox-signin">Remember me</label>
                                         </div>
                                     </div>
+
                                     <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-primary btn-block" type="submit"> Sign Up </button>
+                                        <button class="btn btn-primary btn-block" type="submit"> Log In </button>
                                     </div>
 
                                 </form>
@@ -77,7 +70,8 @@
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-light">Already have account?  <a href="login.html" class="text-danger ml-1"><b>Sign In</b></a></p>
+                                <p> <a href="#" class="text-light ml-1"><i class="uil uil-lock mr-1"></i></i>Forgot your password?</a></p>
+                                <p class="text-light">Don't have an account? <a href="/register" class="text-danger ml-1"><b>Sign Up</b></a></p>
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->
