@@ -3,7 +3,10 @@ const morgan = require('morgan');
 const mongoose= require('mongoose');
 const Course= require('./models/course');
 const Club= require('./models/club')
+const Comment= require('./models/comment')
 const { result } = require('lodash');
+const { findById } = require('./models/course');
+
 
 // express app
 const app = express();
@@ -19,14 +22,15 @@ app.set('view engine', 'ejs');
 
 // middleware & static files
 app.use(morgan('dev'));
+app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname));
 
 // listen for requests
 
 app.get('/add-club', (req, res) => {
     const club= new Club({
-        name: 'Design',
-        council: 'Moyesha',
+        name: 'Insync',
+        council: 'James Bond',
         description: 'Nullam elementum felis lectus, eu pellentesque nisi viverra vel. Sed a dignissim enim. Vivamus at turpis dolor.'
     });
 
@@ -48,8 +52,19 @@ app.get('/show-course', (req, res) => {
      });
 })
 
+app.post('/comment', (req,res) => {
+    const comment= new Comment(req.body);
+
+    comment.save()
+     .then((result) => {
+         res.redirect('/course');
+     })
+     .catch((err) => {
+         console.log(err);
+     })
+})
+
 app.get('/', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
     Course.find()
      .then((result) => {
         res.render('index', {courses: result});
@@ -59,7 +74,6 @@ app.get('/', (req, res) => {
      });
 })
 app.get('/clubs', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
     Club.find()
      .then((result) => {
         res.render('clubs', {clubs: result});
@@ -68,31 +82,35 @@ app.get('/clubs', (req, res) => {
          console.log(err);
      });
 })
-app.get('/course', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
-    res.render('course');
+app.get('/course/:id', async (req, res) => {
+    const id= req.params.id;
+    const course= await Course.findById(id)
+    const comments= await Comment.find()
+
+    res.render('course', {course, comments});
+    
 })
 app.get('/home', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
     res.redirect('/');
 })
 app.get('/login', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
     res.render('login');
 })
 app.get('/register', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
     res.render('register');
 })
-app.get('/all-courses', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
-    res.render('all-courses');
+app.get('/all-courses', async (req, res) => {
+    const courses= await Course.find();
+    res.render('all-courses', {courses});
 })
-app.get('/club-specific', (req, res) => {
-    // res.send('<h1> Hello World</h1>');
-    res.render('club-specific');
+app.get('/clubs/:id', async (req, res) => {
+    const id= req.params.id;
+    const club= await Club.findById(id)
+    const courses= await Course.find();
+
+    res.render('club-specific', {club, courses})
+
 })
 app.use((req, res) => {
-    // res.send('<h1> Hello World</h1>');
     res.status(404).render('404');
 })

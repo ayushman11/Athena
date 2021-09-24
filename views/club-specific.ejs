@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Club-specific</title>
 
     <!-- JS & JQUERY -->
@@ -36,7 +36,7 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="heading-primary">Fourthwall</div>
+                <div class="heading-primary"><%= club.name %></div>
                 <div class="heading-2"><span class="typing"></span></div>
                 <div class="heading-secondary"><a href="#">View All Courses <i class="uil uil-arrow-right button-icon"></i></a></div>
             </div>
@@ -44,70 +44,7 @@
     </section>
 
     <!-- ================== COURSES ================== -->
-    <section class="courses" id="courses">
-        <div class="max-width">
-            <h2 class="title">Our Courses</h2>
-            <div class="carousel owl-carousel owl-theme">
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card1.jpg" alt="">
-                        <div class="course-title">Course 1</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card2.jpg" alt="">
-                        <div class="course-title">Course 2</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card3.jpg" alt="">
-                        <div class="course-title">Course 3</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card4.jpg" alt="">
-                        <div class="course-title">Course 4</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card5.jpg" alt="">
-                        <div class="course-title">Course 5</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card6.jpg" alt="">
-                        <div class="course-title">Course 6</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card7.jpg" alt="">
-                        <div class="course-title">Course 7</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-slide">
-                    <div class="box">
-                        <img src="assets/images/card8.jpg" alt="">
-                        <div class="course-title">Course 8</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <%- include('./partials/course-slider.ejs') %>
 
     <!-- ======================== SKILLS =========================== -->
     <section class="skills section" id="skills">
@@ -124,43 +61,16 @@
 
                         <i class="uil uil-arrow-down skills_arrow"></i>
                     </div>
-
+                    <% courses.forEach(course => { %>
                     <div class="skills_list grid">
                         <div class="skills_data">
                             <div class="skills_titles">
-                                <h3 class="skills_name"><a href="/course">Course 1</a> </h3>
+                                <h3 class="skills_name"><a href="/course"><%= course.title %></a> </h3>
                                 <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="skills_list grid">
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name"><a href="/course">Course 2</a> </h3>
-                                <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="skills_list grid">
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name"><a href="/course">Course 3</a> </h3>
-                                <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="skills_list grid">
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name"><a href="/course">Course 4</a> </h3>
-                                <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
-                            </div>
-                        </div>
-
-                    </div>
+                    <% }) %>
                 </div>
             </div>
 
@@ -176,30 +86,16 @@
                         <i class="uil uil-arrow-down skills_arrow"></i>
                     </div>
 
-                    <div class="skills_list grid">
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name"><a href="/course">Course 1</a> </h3>
-                                <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
+                    <% courses.forEach(course => { %>
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name"><a href="/course"><%= course.title %></a> </h3>
+                                    <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="skills_list grid">
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name"><a href="/course">Course 2</a> </h3>
-                                <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills_list grid">
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name"><a href="/course">Course 3</a> </h3>
-                                <span class="skills_number"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></span>
-                            </div>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
             </div>
         </div>
@@ -213,8 +109,8 @@
         <i class="uil uil-arrow-up scrollup_icon"></i>
     </a>
     <!-- MAIN JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </Course >

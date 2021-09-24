@@ -9,17 +9,17 @@
     <meta content="Coderthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
 
     <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 
     <!-- App css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
 
     <!-- JS & JQUERY -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
 
     <div class="wrapper">
         <div class="container-fluid">
-
+            <div class="h1 text-dark mt-1"><%= course.title %></div>
             <div class="row">
                 <div class="col-sm-8">
                     <div class="video">
@@ -48,12 +48,12 @@
 
 
 
-                    <form method="post" class="card-box">
+                    <form action="/comment" method="POST" class="card-box">
                         <span class="input-icon icon-right">
-                            <textarea rows="3" class="form-control" placeholder="Post a new message"></textarea>
+                            <textarea required name="body" rows="3" class="form-control" placeholder="Post a new message"></textarea>
                         </span>
                         <div class="pt-1 float-right">
-                            <a href="" class="btn btn-primary btn-sm waves-effect waves-light">Send</a>
+                            <button class="btn btn-primary btn-sm waves-effect waves-light">Send</button>
                         </div>
                         <ul class="nav nav-pills profile-pills mt-1">
                             <li>
@@ -74,89 +74,23 @@
                     <div class="card-box">
                         <div class="media mb-2">
                             <div class="media-body">
+                                <% if(comments.length > 0) {%>
+                                    <% comments.forEach(comment => { %>
                                 <h5 class="mt-0"><a href="#" class="text-dark">Adam Jansen</a><small
-                                        class="ml-1 text-muted">about 2 minuts ago</small></h5>
-                                <p>Story based around the idea of time lapse, animation to post soon!</p>
+                                    <% var date= (comment.createdAt + ''); %>
+                                    <% date= date.split("GMT")[0]; %>
+                                        class="ml-1 text-muted"><%= date %></small></h5>
+                                <p><%= comment.body %></p>
                                 <div class="comment-footer pt-2 mb-3">
                                     <a href="#"><i class="uil uil-thumbs-up"></i></i></a>
                                     <a href="#"><i class="uil uil-thumbs-down"></i></a>
                                     <a href="#">Reply</a>
                                 </div>
 
-                                <div class="media mb-2">
-                                    <div class="media-body">
-                                        <h5 class="mt-0"><a href="#" class="text-dark">John Smith</a><small
-                                                class="ml-1 text-muted">about 1 hour ago</small></h5>
-                                        <p>Wow impressive!</p>
-
-                                        <div class="comment-footer">
-                                            <a href="#"><i class="uil uil-thumbs-up"></i></i></a>
-                                            <a href="#"><i class="uil uil-thumbs-down"></i></a>
-                                            <a href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h5 class="mt-0"><a href="#" class="text-dark">Matt Cheuvront</a><small
-                                                class="ml-1 text-muted">about 2 hour ago</small></h5>
-                                        <p>Wow, that is really nice.</p>
-
-                                        <div class="comment-footer mb-3">
-                                            <a href="#"><i class="uil uil-thumbs-up"></i></i></a>
-                                            <a href="#"><i class="uil uil-thumbs-down"></i></a>
-                                            <a href="#">Reply</a>
-                                        </div>
-
-                                        <div class="media mb-2">
-                                            <div class="media-body">
-                                                <h5 class="mt-0"><a href="#" class="text-dark">Stephanie
-                                                        Walter</a><small class="ml-1 text-muted">about 3 hour
-                                                        ago</small></h5>
-                                                <p>Nice work, makes me think of The Money Pit.</p>
-
-                                                <div class="comment-footer">
-                                                    <a href="#"><i class="uil uil-thumbs-up"></i></i></a>
-                                                    <a href="#"><i class="uil uil-thumbs-down"></i></a>
-                                                    <a href="#">Reply</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <% }) %>
+                                <% } %>
                             </div>
                         </div>
-                        <!--  media -->
-
-                        <div class="media mb-3">
-                            <div class="media-body">
-                                <h5 class="mt-0"><a href="#" class="text-dark">John Smith</a><small
-                                        class="ml-1 text-muted">about 4 hour ago</small></h5>
-                                <p>i'm in the middle of a timelapse animation myself! (Very different though.) Awesome
-                                    stuff.</p>
-
-                                <div class="comment-footer">
-                                    <a href="#"><i class="uil uil-thumbs-up"></i></i></a>
-                                    <a href="#"><i class="uil uil-thumbs-down"></i></a>
-                                    <a href="#">Reply</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="media mb-3">
-                            <div class="media-body">
-                                <h5 class="mt-0"><a href="#" class="text-dark">Nicolai Larson</a><small
-                                        class="ml-1 text-muted">about 10 hour ago</small></h5>
-                                <p>The parallax is a little odd but O.o that house build is awesome!!</p>
-
-                                <div class="comment-footer">
-                                    <a href="#"><i class="uil uil-thumbs-up"></i></i></a>
-                                    <a href="#"><i class="uil uil-thumbs-down"></i></a>
-                                    <a href="#">Reply</a>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="text-center">
                             <a href="" class="text-danger"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load more </a>
                         </div>
@@ -315,11 +249,11 @@
     <%- include('./partials/footer.ejs') %>
 
     <!-- Vendor js -->
-    <script src="assets/js/vendor.min.js"></script>
+    <script src="/assets/js/vendor.min.js"></script>
 
     <!-- App js-->
-    <script src="assets/js/app.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+    <script src="/assets/js/script.js"></script>
 
 </body>
 
