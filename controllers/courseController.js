@@ -6,8 +6,7 @@ const course_index= async (req, res) => {
     const course= await Course.findById(id)
     const comments= await Comment.find({course: id});
 
-    res.render('course', {course, comments});
-    
+    res.render('course', {course, comments});  
 }
 
 const post_comment= async (req,res) => {

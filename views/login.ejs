@@ -39,16 +39,16 @@
                                     <h4 class="text-uppercase mt-0">Sign In</h4>
                                 </div>
 
-                                <form action="/">
+                                <form>
 
                                     <div class="form-group mb-3">
                                         <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="email" id="emailaddress" required="" placeholder="Enter your email">
+                                        <input class="form-control" type="email" id="emailaddress" name="email" required="" placeholder="Enter your email">
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label for="password">Password</label>
-                                        <input class="form-control" type="password" required="" id="password" placeholder="Enter your password">
+                                        <input class="form-control" type="password" name="password" required="" id="password" placeholder="Enter your password">
                                     </div>
 
                                     <div class="form-group mb-3">
@@ -83,6 +83,21 @@
             <!-- end container -->
         </div>
         <!-- end page -->
+
+        <script>
+            const form= document.querySelector('form');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // get the values
+                const email= form.email.value;
+                const password= form.password.value;
+
+                console.log(email, password);
+
+            })
+        </script>
 
         <!-- Vendor js -->
         <script src="assets/js/vendor.min.js"></script>
