@@ -53,11 +53,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="email" id="emailaddress" required placeholder="Enter your email">
+                                        <input class="form-control" name="email" type="email" id="emailaddress" required placeholder="Enter your email">
+                                        <div class="email error text-danger"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input class="form-control" type="password" required id="password" placeholder="Enter your password">
+                                        <input class="form-control" name="password" type="password" required id="password" placeholder="Enter your password">
+                                        <div class="password error text-danger"></div>
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox">
@@ -89,6 +91,44 @@
             <!-- end container -->
         </div>
         <!-- end page -->
+
+        <script>
+            const form= document.querySelector('form');
+            const emailError= document.querySelector('.email.error');
+            const passwordError= document.querySelector('.password.error');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // reset errors
+                emailError.textContent= '';
+                passwordError.textContent= '';
+
+                // get the values
+                const email= form.email.value;
+                const password= form.password.value;
+
+                try {
+                    const res = await fetch('/register', {
+                        method: 'POST',
+                        body: JSON.stringify({ email, password }),
+                        headers: {'Content-Type': 'application/json'}
+                    })
+                    const data = await res.json();
+                    console.log(data);
+                    if(data.errors) {
+                        emailError.textContent= data.errors.email;
+                        passwordError.textContent= data.errors.password;
+                    }
+                    if(data.user) {
+                        location.assign('/');
+                    }
+                } catch (err) {
+                    console.log(err);
+                }
+
+            })
+        </script>
 
         <!-- Vendor js -->
         <script src="assets/js/vendor.min.js"></script>
