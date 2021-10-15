@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena</title>
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    
+    <!-- STYLESHEET -->
+    <%- include('./partials/css-includes.ejs') %>
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+
+    <!-- TYPING ANIMATION JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+
+    <!-- JS & JQUERY -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+</head>
+
+<body>
+    <!-- ================== NAVBAR ================== -->
+    <%- include('./partials/navbar.ejs') %>
+    <!-- ==================== HOME =================== -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="heading-primary"><%= course.title %></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== CARD DISPLAY ============= -->
+
+    <div class="wrapper">
+        <div class="container-fluid">
+            <section class="course-home mb-4">
+
+                <h2 class="title">Playlist</h2>
+            </section>
+            <div class="row my-4">
+                <div class="col-md-4">
+                    <div class="card align-items-center">
+                        <img class="my-2 card-img-top img-fluid" src="../assets/images/card1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card align-items-center">
+                        <img class="my-2 card-img-top img-fluid" src="../assets/images/card2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card align-items-center">
+                        <img class="my-2 card-img-top img-fluid" src="../assets/images/card3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row my-4">
+                <div class="col-md-4">
+                    <div class="card align-items-center">
+                        <img class="my-2 card-img-top img-fluid" src="../assets/images/card1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card align-items-center">
+                        <img class="my-2 card-img-top img-fluid" src="../assets/images/card2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card align-items-center">
+                        <img class="my-2 card-img-top img-fluid" src="../assets/images/card3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== FOOTER =================== -->
+    <%- include('./partials/footer.ejs') %>    
+
+    <!-- SCROLL TOP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup_icon"></i>
+    </a>
+    <!-- MAIN JS -->
+    <%- include('./partials/js-includes.ejs') %>
+
+</body>
