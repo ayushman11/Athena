@@ -11,11 +11,7 @@
 
     
     <!-- STYLESHEET -->
-    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" /> -->
-    
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <%- include('./partials/css-includes.ejs') %>
 
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -37,7 +33,7 @@
     <!-- ================== NAVBAR ================== -->
     <%- include('./partials/navbar.ejs') %>
     <!-- ==================== HOME =================== -->
-    <section class="home" id="home">
+    <section class="home mb-4" id="home">
         <div class="max-width">
             <div class="home-content">
                 <div class="heading-primary">Athena</div>
@@ -48,7 +44,8 @@
     </section>
 
     <!-- ================== COURSES ================== -->
-    <%- include('./partials/course-slider.ejs') %>    
+    <%- include('./partials/course-slider.ejs') %>
+  
     <!-- ================== FOOTER =================== -->
     <%- include('./partials/footer.ejs') %>
     <!-- SCROLL TOP -->
@@ -57,17 +54,10 @@
     </a>
 
     <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
 
-    <!-- Vendor js -->
-    <!-- <script src="assets/js/vendor.min.js"></script> -->
+    <%- include('./partials/js-includes.ejs') %>
 
-    <!-- App js-->
-    <!-- <script src="assets/js/app.min.js"></script> -->
-
-
-
-    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

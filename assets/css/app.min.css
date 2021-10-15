@@ -469,7 +469,7 @@ body {
   padding-right: 40px;
 }
 .navbar-custom {
-  background-color: #435966;
+  background: linear-gradient(-90deg, #6dd5ed, #2193b0);
   -webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   position: fixed;
@@ -484,7 +484,9 @@ body {
 }
 .navbar-custom .topnav-menu .nav-link {
   padding: 0 15px;
-  color: #ced4da;
+  color: #fff;
+  font-weight: 500;
+  font-size: large;
   min-width: 32px;
   display: block;
   line-height: 70px;

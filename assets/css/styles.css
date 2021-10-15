@@ -40,7 +40,7 @@ section .title {
   font-weight: 400;
   margin-bottom: 60px;
   padding-bottom: 20px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif !important;
 }
 
 section .title::before {
@@ -65,8 +65,8 @@ section .title::after {
   transform: translateX(-50%);
 }
 
-.courses, .clubs {
-  font-family: "Poppins", sans-serif;
+.courses, .clubs .course-home {
+  font-family: "Poppins", sans-serif !important;
 }
 /* ========== BUTTON ============ */
 .button-icon {
@@ -78,7 +78,7 @@ section .title::after {
   width: 100%;
   padding: 20px 0;
   z-index: 999;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif !important;
   transition: all 0.3s ease;
 }
 
@@ -168,7 +168,7 @@ navigation.sticky-shadow {
 .home .home-content .heading-secondary a {
   color: var(--light-color);
   position: relative;
-  bottom: -200px;
+  bottom: -100px;
   font-size: 30px;
   font-weight: 400;
   margin-left: -3px;
@@ -187,6 +187,7 @@ navigation.sticky-shadow {
   align-items: center;
   justify-content: center;
   color: var(--light-color);
+  margin-bottom: 100px;
 }
 
 .clubs-home .max-width {
@@ -309,9 +310,9 @@ navigation.sticky-shadow {
 
 /*======================== RESUSABLE CSS CLASSES  =========================*/
 
-section {
+/* section {
   padding: 70px 0;
-}
+} */
 
 .section_title {
   font-size: 1.5rem;
@@ -347,6 +348,10 @@ section {
 
 .all-courses .title::after{
   content: "Clubs";
+}
+
+.course-home .title::after {
+  content: "All Videos" !important;
 }
 
 .skills_container {
@@ -462,8 +467,6 @@ section {
   display: grid;
   gap: 1.5rem;
   max-width: 768px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
   padding: 0;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 3.5rem;

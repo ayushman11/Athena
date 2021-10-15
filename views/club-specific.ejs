@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <%- include('./partials/css-includes.ejs') %>
+
     <title>Club-specific</title>
 
     <!-- JS & JQUERY -->
@@ -33,7 +34,7 @@
     <%- include('./partials/navbar.ejs') %>
 
     <!-- ==================== HOME =================== -->
-    <section class="home" id="home">
+    <section class="home mb-4" id="home">
         <div class="max-width">
             <div class="home-content">
                 <div class="heading-primary"><%= club.name %></div>
@@ -102,15 +103,15 @@
     </section>
 
     <!-- ================== FOOTER =================== -->
-    <%- include('./partials/footer.ejs') %>    
-
+    < %- include('./partials/footer.ejs') %>    
+    
     <!-- SCROLL TOP -->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup_icon"></i>
     </a>
     <!-- MAIN JS -->
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <%- include('./partials/js-includes.ejs') %>    
+
 </body>
 
 </Course >

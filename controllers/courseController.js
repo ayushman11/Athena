@@ -1,12 +1,12 @@
 const Course= require('../models/course');
 const Comment= require('../models/comment');
 
-const course_index= async (req, res) => {
+const course_video= async (req, res) => {
     const id= req.params.id;
     const course= await Course.findById(id)
     const comments= await Comment.find({course: id});
 
-    res.render('course', {course, comments});  
+    res.render('video', {course, comments});  
 }
 
 const post_comment= async (req,res) => {
@@ -29,8 +29,16 @@ const all_courses= async (req, res) => {
     res.render('all-courses', {courses});
 }
 
+const course_home= async (req, res) => {
+    const id= req.params.id;
+    const course= await Course.findById(id)
+
+    res.render('course-home', {course});
+}
+
 module.exports = {
     post_comment,
-    course_index,
-    all_courses
+    course_video,
+    all_courses,
+    course_home
 }

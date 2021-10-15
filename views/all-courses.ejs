@@ -19,10 +19,8 @@
 
 
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <%- include('./partials/css-includes.ejs') %>
 
-    <link rel="stylesheet" href="assets/css/styles.css">
     <title>All Courses</title>
 
     <!-- JS & JQUERY -->
@@ -40,7 +38,7 @@
     <%- include('./partials/navbar.ejs') %>
 
     <!-- ==================== HOME =================== -->
-    <section class="home" id="home">
+    <section class="home mb-4" id="home">
         <div class="max-width">
             <div class="home-content">
                 <div class="heading-primary">Athena</div>
@@ -319,15 +317,9 @@
         });
     </script>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
 
-    
     <!-- MAIN JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/script.js"></script>
+    <%- include('./partials/js-includes.ejs') %>
 </body>
 
 </Course >
