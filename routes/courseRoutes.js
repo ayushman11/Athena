@@ -3,12 +3,14 @@ const courseController= require('../controllers/courseController');
 
 const router= express.Router();
 
-router.get('/course/video/:id', courseController.course_video);
+router.get('/course/:course_id/:video_id', courseController.course_video);
 
-router.post('/course/:id', courseController.post_comment);
+router.post('/course/:course_id/:video_id', courseController.post_comment);
 
 router.get('/all-courses', courseController.all_courses);
 
-router.get('/course-home/:id', courseController.course_home);
+router.get('/course/:course_id', courseController.course_home);
+
+router.get('/add-course', courseController.add_course);
 
 module.exports= router;

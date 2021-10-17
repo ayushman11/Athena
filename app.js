@@ -59,21 +59,7 @@ app.use(indexRoutes);
 
 
 
-// app.get('/add-club', (req, res) => {
-//     const club= new Club({
-//         name: 'Insync',
-//         council: 'James Bond',
-//         description: 'Nullam elementum felis lectus, eu pellentesque nisi viverra vel. Sed a dignissim enim. Vivamus at turpis dolor.'
-//     });
 
-//     club.save()
-//      .then((result) =>{
-//          res.send(result)
-//      })
-//      .catch((err)=>{
-//          console.log(err);
-//      });
-// })
 // app.get('/show-course', (req, res) => {
 //     Course.find()
 //      .then((result) =>{

@@ -13,7 +13,26 @@ const courseSchema = new Schema({
     short_description: {
         type: String,
         required: true,
-    }
+    },
+    playlist: [{
+        title: {
+            type: String,
+        },
+        link: {
+            type:String,
+        },
+        description: {
+            type: String,
+        },
+        comments: [{
+            // author: {
+            //     type: String
+            // },
+            body: {
+                type: String
+            }
+        }],
+    }],
 }, {timestamps: true});
 
 const Course = mongoose.model('Course', courseSchema);

@@ -16,8 +16,11 @@
 
 
     <!-- App css -->
-    <%- include('./partials/css-includes.ejs') %>
-
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap1.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
     <!-- JS & JQUERY -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -37,7 +40,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="video">
-                        <iframe src="https://www.youtube.com/embed/xSrricvmTv8"
+                        <iframe src="<%= video.link %>"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -45,14 +48,15 @@
 
 
 
-                    <form action="/course/<%= course._id %>" method="POST" class="card-box">
+                    <form action="/course/<%= course._id %>/<%= video._id %>" method="POST" class="card-box">
                         <span class="input-icon icon-right">
                             <textarea required name="body" rows="3" class="form-control" placeholder="Post a new message"></textarea>
                         </span>
                         <div class="pt-1 float-right">
                             <button class="btn btn-primary btn-sm waves-effect waves-light">Send</button>
                         </div>
-                        <ul class="nav nav-pills profile-pills mt-1">
+                        <div style="clear:both;"></div>
+                        <!-- <ul class="nav nav-pills profile-pills mt-1" style="background:none">
                             <li>
                                 <a href="#"><i class="uil uil-user"></i></a>
                             </li>
@@ -65,33 +69,10 @@
                             <li>
                                 <a href="#"><i class="uil uil-smile"></i></a>
                             </li>
-                        </ul>
+                        </ul> -->
 
                     </form>
-                    <div class="card-box">
-                        <div class="media mb-2">
-                            <div class="media-body">
-                                <% if(comments.length > 0) {%>
-                                    <% comments.forEach(comment => { %>
-                                <h5 class="mt-0"><a href="#" class="text-dark">Adam Jansen</a><small
-                                    <% var date= (comment.createdAt + ''); %>
-                                    <% date= date.split("GMT")[0]; %>
-                                        class="ml-1 text-muted"><%= date %></small></h5>
-                                <p><%= comment.body %></p>
-                                <div class="comment-footer pt-2 mb-3">
-                                    <a href="#"><i class="uil uil-thumbs-up"></i></i></a>
-                                    <a href="#"><i class="uil uil-thumbs-down"></i></a>
-                                    <a href="#">Reply</a>
-                                </div>
-
-                                    <% }) %>
-                                <% } %>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="" class="text-danger"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load more </a>
-                        </div>
-                    </div>
+   
 
                 </div>
 
