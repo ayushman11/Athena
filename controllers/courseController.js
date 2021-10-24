@@ -48,10 +48,14 @@ const course_home= async (req, res) => {
 const add_course = async (req,res) => {
 
     const course= new Course({
-        title: 'Python',
-        author: 'FreeCodeCamp',
+        title: 'Express JS',
+        authors: [{name: 'Nikhil Mandhani', position: 'Web Nominee'}, {name: 'Ayushman Choudhary', position: 'Web Convener'}, {name: 'Ayush Jain', position: 'Web Convener'}, {name: 'Aaditya Salukhe', position: 'Web Convener'}],
         short_description: 'Nullam elementum felis lectus, eu pellentesque nisi viverra vel. Sed a dignissim enim. Vivamus at turpis dolor.',
-        playlist: [{title: 'Video 1', link: 'udemy.com', description: "This is a short description"}, {title: 'Video 2', link: 'codeforces.com', description: "This is a short description2"}],
+        playlist: [
+            {title: 'Tutorial and Setup', link: 'https://www.youtube.com/embed/zb3Qk8SG5Ms', description: "This is a short description"}, 
+            {title: 'Node JS Basics', link: 'https://www.youtube.com/embed/OIBIXYLJjsI&', description: "This is a short description2"},
+            {title: 'Clients and Server', link: 'https://www.youtube.com/embed/HPZ1leCV8k', description: "This is a short description2"},
+            {title: 'Requests and Response', link: 'https://www.youtube.com/DQD00NAUPNk', description: "This is a short description2"}],
     });
     
     course.save()

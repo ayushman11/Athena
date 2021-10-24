@@ -85,76 +85,30 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">About Athena</a>
+                                <a href="/about-us" class="dropdown-item">About Athena</a>
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Other Courses</a>
+                                <a href="/all-courses" class="dropdown-item">Other Courses</a>
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Contact Us</a>
+                                <a href="/contact-us" class="dropdown-item">Contact Us</a>
                             </div>
                         </div>
 
                         <h4 class="header-title mt-0 mb-3">The Team Members</h4>
 
                         <ul class="list-group mb-0 user-list">
+                            <% course.authors.forEach(author => { %>
                             <li class="list-group-item">
-                                <a href="#" class="user-list-item">
+                                <div class="user-list-item">
                                     <div class="user avatar-sm float-left mr-2">
                                         <i class="uil uil-bitcoin-alt"></i>
                                     </div>
                                     <div class="user-desc">
-                                        <h5 class="name mt-0 mb-1">Michael Zenaty</h5>
-                                        <p class="desc text-muted mb-0 font-12">CEO</p>
+                                        <h5 class="name mt-0 mb-1"><%= author.name %></h5>
+                                        <p class="desc text-muted mb-0 font-12"><%= author.position %></p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
-
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="user avatar-sm float-left mr-2">
-                                        <i class="uil uil-amazon"></i>
-                                    </div>
-                                    <div class="user-desc">
-                                        <h5 class="name mt-0 mb-1">James Neon</h5>
-                                        <p class="desc text-muted mb-0 font-12">Web Designer</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="user avatar-sm float-left mr-2">
-                                        <i class="uil uil-facebook"></i>
-                                    </div>
-                                    <div class="user-desc">
-                                        <h5 class="name mt-0 mb-1">John Smith</h5>
-                                        <p class="desc text-muted mb-0 font-12">Web Developer</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="user avatar-sm float-left mr-2">
-                                        <i class="uil uil-google-drive-alt"></i>
-                                    </div>
-                                    <div class="user-desc">
-                                        <h5 class="name mt-0 mb-1">Michael Zenaty</h5>
-                                        <p class="desc text-muted mb-0 font-12">Programmer</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="user avatar-sm float-left mr-2">
-                                        <i class="uil uil-apple"></i>
-                                    </div>
-                                    <div class="user-desc">
-                                        <h5 class="name mt-0 mb-1">Mat Helme</h5>
-                                        <p class="desc text-muted mb-0 font-12">Manager</p>
-                                    </div>
-                                </a>
-                            </li>
+                            <% }) %>
                         </ul>
                     </div>
 
@@ -176,42 +130,18 @@
                             </div>
                         </div>
 
-                        <h4 class="header-title mt-0 mb-3"><i class="uil uil-bars"></i></i> Next on the Playlist</h4>
+                        <h4 class="header-title mt-0 mb-3"><i class="uil uil-bars"></i></i> Full Playlist</h4>
 
                         <ul class="list-group mb-0 user-list">
+                            <% course.playlist.forEach(item => { %>
                             <li class="list-group-item">
                                 <a href="#" class="user-list-item">
                                     <div class="user-desc overflow-hidden">
-                                        <h5 class="name mt-0 mb-1">Video 2</h5>
-                                        <span class="desc text-muted font-12 text-truncate d-block">1.5 hr</span>
+                                        <h5 class="name mt-0 mb-1"><a href="/course/<%= course._id %>/<%= item._id %>"><%= item.title %></a></h5>
                                     </div>
                                 </a>
                             </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="user-desc overflow-hidden">
-                                        <h5 class="name mt-0 mb-1">Video 3</h5>
-                                        <span class="desc text-muted font-12 text-truncate d-block">2.5 hr</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="user-desc overflow-hidden">
-                                        <h5 class="name mt-0 mb-1">Video 4</h5>
-                                        <span class="desc text-muted font-12 text-truncate d-block">0.5 hr</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="user-desc overflow-hidden">
-                                        <h5 class="name mt-0 mb-1">Video 5</h5>
-                                        <span class="desc text-muted font-12 text-truncate d-block">1 hr</span>
-                                    </div>
-                                </a>
-                            </li>
-
+                            <% }) %>
                         </ul>
                     </div>
 

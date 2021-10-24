@@ -8,6 +8,7 @@ const clubsRoutes = require('./routes/clubsRoutes');
 const courseRoutes = require('./routes/courseRoutes');
 const authRoutes = require('./routes/authRoutes');
 const cookieParser = require('cookie-parser');
+const { checkUser } = require('./middleware/authMiddleware');
 
 
 // express app
@@ -49,6 +50,8 @@ app.use(cookieParser());
 
 //     res.json(cookies);
 // })
+
+app.get("*", checkUser);
 
 app.use(courseRoutes);
 app.use(clubsRoutes);

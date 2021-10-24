@@ -6,10 +6,14 @@ const courseSchema = new Schema({
         type: String,
         required: true,
     },
-    author: {
-        type: String,
-        required: true,
-    },
+    authors: [{
+        name: {
+            type: String
+        },
+        position: {
+            type: String
+        }
+    }],
     short_description: {
         type: String,
         required: true,

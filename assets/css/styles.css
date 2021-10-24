@@ -65,7 +65,7 @@ section .title::after {
   transform: translateX(-50%);
 }
 
-.courses, .clubs .course-home {
+.courses, .clubs, .course-home, .about-us {
   font-family: "Poppins", sans-serif !important;
 }
 /* ========== BUTTON ============ */
@@ -351,6 +351,9 @@ navigation.sticky-shadow {
 }
 
 .course-home .title::after {
+  content: "All Videos" !important;
+}
+.about-us .title::after {
   content: "All Videos" !important;
 }
 

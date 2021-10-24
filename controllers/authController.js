@@ -42,10 +42,10 @@ const register_get= (req, res) => {
 }
 
 const register_post= async (req, res) => {
-    const {email, password}= req.body;
+    const {fullname, email, password}= req.body;
     
     try {
-        const user = await User.create({email, password});
+        const user = await User.create({fullname, email, password});
         const token = createToken(user._id);
         res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge*1000});
         res.status(201).json({user: user._id});
@@ -73,9 +73,15 @@ const login_post= async (req, res) => {
     }
 }
 
+const logout_get = (req,res) => {
+    res.cookie('jwt', '', {maxAge: 1});
+    res.redirect('/');
+}
+
 module.exports= {
     register_get,
     register_post,
     login_get,
-    login_post
+    login_post,
+    logout_get
 }
