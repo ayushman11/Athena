@@ -1,12 +1,11 @@
 const express= require('express');
-const {requireAuth} = require('../middleware/authMiddleware');
 const courseController= require('../controllers/courseController');
 
 const router= express.Router();
 
-router.get('/course/:course_id/:video_id', requireAuth, courseController.course_video);
+router.get('/course/:course_id/:video_id', courseController.course_video);
 
-router.post('/course/:course_id/:video_id', requireAuth, courseController.post_comment);
+router.post('/course/:course_id/:video_id', courseController.post_comment);
 
 router.get('/all-courses', courseController.all_courses);
 

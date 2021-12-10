@@ -84,7 +84,7 @@ section .title::after {
 
 .navigation.sticky {
   padding: 15px 0;
-  background: linear-gradient(-90deg, #6dd5ed, #2193b0);
+  background: #111111;
 }
 
 navigation.sticky-shadow {

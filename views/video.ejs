@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Video</title>
+    <title>Athena - Video</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -14,6 +14,9 @@
     <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
+    <!-- Template Main CSS File -->
+    
+    
 
     <!-- App css -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -21,6 +24,7 @@
     <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+    
     <!-- JS & JQUERY -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -56,23 +60,31 @@
                             <button class="btn btn-primary btn-sm waves-effect waves-light">Send</button>
                         </div>
                         <div style="clear:both;"></div>
-                        <!-- <ul class="nav nav-pills profile-pills mt-1" style="background:none">
-                            <li>
-                                <a href="#"><i class="uil uil-user"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="uil uil-message"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="uil uil-camera"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="uil uil-smile"></i></a>
-                            </li>
-                        </ul> -->
-
                     </form>
-   
+
+                    <% if (comments.length > 0) { %>
+                    <% comments.forEach(comment => { %>
+
+                    <div class="card-box">
+
+                        <div class="media mb-3">
+                            <i class="uil uil-user"></i>
+                            <div class="media-body">
+                                <!-- <h5 class="mt-0"><a href="#" class="text-dark">John Smith</a><small class="ml-1 text-muted">about 4 hour ago</small></h5> -->
+                                <p><%= comment.body %></p>
+
+                                <!-- <div class="comment-footer">
+                                    <a href="#"><i class="far fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="far fa-thumbs-down"></i></a>
+                                    <a href="#">Reply</a>
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <% }) %>
+                    <% } %>
 
                 </div>
 
@@ -152,9 +164,6 @@
 
         </div> <!-- end container -->
     </div>
-
-    <!-- ================== FOOTER =================== -->
-    <%- include('./partials/footer.ejs') %>
 
     <!-- Vendor js -->
     <script src="/assets/js/vendor.min.js"></script>

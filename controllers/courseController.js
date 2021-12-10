@@ -5,7 +5,7 @@ const course_video= async (req, res) => {
     const course_id= req.params.course_id;
     const video_id= req.params.video_id;
     let course = await Course.findById(course_id);
-    const comments= await Comment.find({"course": course_id});
+    const comments= await Comment.find({"video_id": video_id});
     course= course.toJSON();
     const playlist= course.playlist;
     let video=0;

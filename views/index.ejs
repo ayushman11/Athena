@@ -2,61 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Athena</title>
-    <!-- UNICONS -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    
-    <!-- STYLESHEET -->
-    <%- include('./partials/css-includes.ejs') %>
+  <title>Athena</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- Favicons -->
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- TYPING ANIMATION JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="assets1/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets1/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets1/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets1/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets1/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- JS & JQUERY -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- Template Main CSS File -->
+  <link href="assets1/css/style.css" rel="stylesheet">
+  
 </head>
 
 <body>
-    <!-- ================== NAVBAR ================== -->
-    <%- include('./partials/navbar.ejs') %>
-    <!-- ==================== HOME =================== -->
-    <section class="home mb-4" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="heading-primary">Athena</div>
-                <div class="heading-2"><span class="typing"></span></div>
-                <div class="heading-secondary"><a href="#">View All Courses <i class="uil uil-arrow-right button-icon"></i></a></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================== COURSES ================== -->
-    <%- include('./partials/course-slider.ejs') %>
   
-    <!-- ================== FOOTER =================== -->
-    <%- include('./partials/footer.ejs') %>
-    <!-- SCROLL TOP -->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup_icon"></i>
-    </a>
+  <!-- ================== NAVBAR ================== -->
+  <%- include('./partials/navbar1.ejs') %>
+  
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row">
+        <div class="col-xl-6">
+          <h1>Athena</h1>
+          <h2>
+            <span class="typer text-white" id="main" data-words="InSync,Fourthwall,Rang & Pixels,Literati,Style Up,Comedy Cons,Roots" data-delay="100" data-deleteDelay="1000"></span>
+            <span class="cursor" data-owner="main"></span>
+          </h2>
+          <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+          <a href="/all-courses" class="btn-get-started scrollto">View Courses</a>
+        </div>
+        <div class="col-xl-6">
+          <img src="https://drive.google.com/uc?id=16h4WZAFy4Ba1YIMn8oGbnW6OQJ2n-arb" alt="" style="width: 400px;">
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  
+  <main id="main">
+    
+    <!-- ======= Testimonials Section ======= -->
+    <%- include('./partials/course-slider.ejs') %>
+    
+  </main>
+  
+  <!-- ======= Footer ======= -->
+  <%- include('./partials/footer.ejs') %>
+  
 
-    <!-- SWIPER JS -->
-    <script src="/assets/js/swiper-bundle.min.js"></script>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <%- include('./partials/js-includes.ejs') %>
+  <!-- Vendor JS Files -->
+  <script src="assets1/vendor/purecounter/purecounter.js"></script>
+  <script src="assets1/vendor/aos/aos.js"></script>
+  <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets1/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets1/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets1/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets1/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets1/js/main.js"></script>
 
 </body>
 

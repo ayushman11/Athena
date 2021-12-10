@@ -1,21 +1,31 @@
-    <!-- ================== COURSES ================== -->
-    <section class="courses" id="courses">
-        <div class="max-width">
-            <h2 class="title">Our Courses</h2>
-            <% if (courses.length > 0) { %>
-            <div class="carousel owl-carousel owl-theme">
-                    <% courses.forEach(course => { %>
-                        <div class="card-slide">
-                            <div class="box">
-                                <img src="../assets/images/card1.jpg" alt="">
-                                <div class="course-title"><a href="/course/<%= course._id %>"><%= course.title %></a></div>
-                        <p><%= course.short_description %></p>
-                    </div>
-                </div>
-                    <% }) %>
+<section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Courses</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+      </div>
+
+      <% if (courses.length > 0) { %>
+
+      <div class="testimonials-slider swiper">
+        <div class="swiper-wrapper">
+        <% courses.forEach(course => { %>
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets1/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3><a href="/course/<%= course._id %>"><%= course.title %></a></h3>
+                <h4>By <%= course.authors[0].name %></h4>
+                <p><%= course.short_description %></p>
+              </div>
             </div>
-            <% } else {%>
-                <h3>There are no courses available</h3>
-            <% } %>
+          </div>
+        <% }) %>  
         </div>
-    </section>
+        <div class="swiper-pagination"></div>
+      </div>
+      <% } else {%>
+        <h3>There are no courses available</h3>
+      <% } %>
+    </div>
+</section>

@@ -13,6 +13,9 @@ const clubSchema = new Schema({
     description: {
         type: String,
         required: true,
+    },
+    thumbnail: {
+        type: String
     }
 }, {timestamps: true});
 

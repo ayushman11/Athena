@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-main">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Athena.</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,22 +18,8 @@
           <li class="nav-item">
             <a class="nav-link" href="/all-clubs">Clubs</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="uil uil-user-circle h4 text-white"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <% if(user) { %>
-              <li class="px-1">Welcome, <%= user.email %></li>
-              <li><a class="dropdown-item" href="/logout">Logout</a></li>
-              <% } else { %>
-                <li><a class="dropdown-item" href="/login">Login</a></li>
-                <li><a class="dropdown-item" href="/register">Signup</a></li>
-            <% } %>
-            </ul>
-          </li>
-
+        </ul>
       </div>
     </div>
-  </nav>
+</nav>
 

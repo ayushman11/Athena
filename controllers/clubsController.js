@@ -22,8 +22,9 @@ const club_specific = async (req,res) => {
 const add_club = async (req,res) => {
 
     const club= new Club({
-        name: 'Insync',
+        name: 'SilverScreen',
         council: ['James Bond','Daniel Craig'],
+        thumbnail: "https://drive.google.com/uc?id=1vPpb8DAbSRX3Uck86kw8RC4TOgSThyCr",
         description: 'Nullam elementum felis lectus, eu pellentesque nisi viverra vel. Sed a dignissim enim. Vivamus at turpis dolor.'
     });
     

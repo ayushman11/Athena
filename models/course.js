@@ -14,6 +14,9 @@ const courseSchema = new Schema({
             type: String
         }
     }],
+    thumbnail: {
+        type: String
+    },
     short_description: {
         type: String,
         required: true,
@@ -24,6 +27,9 @@ const courseSchema = new Schema({
         },
         link: {
             type:String,
+        },
+        thumbnail: {
+            type: String
         },
         description: {
             type: String,

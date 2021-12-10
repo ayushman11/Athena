@@ -2,164 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Athena-Clubs</title>
-    <!-- UNICONS -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>Athena - All Clubs</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Favicons -->
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- STYLESHEET -->
-    <%- include('./partials/css-includes.ejs') %>
+  <!-- Vendor CSS Files -->
+  <link href="assets1/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets1/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets1/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets1/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets1/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- JS & JQUERY -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
+  <!-- Template Main CSS File -->
+  <link href="assets1/css/style.css" rel="stylesheet">
+  
 </head>
 
 <body>
-    <!-- ================== NAVBAR ================== -->
-    <%- include('./partials/navbar.ejs') %>
-
-    <!-- ==================== HOME =================== -->
-    <section class="clubs-home" id="clubs-home">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"
-                    style="background: url('assets/images/insync.jpg') no-repeat center; background-size: cover;">
-                    <div class="max-width">
-                        <div class="home-content">
-                            <div class="heading-2"><span class="typing"></span></div>
-                            <div class="heading-secondary"><a href="/club-specific">View All Courses <i
-                                        class="uil uil-arrow-right button-icon"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide"
-                    style="background: url('assets/images/fourthwall.jpg') no-repeat center; background-size: cover;">
-                    <div class="max-width">
-                        <div class="home-content">
-                            <div class="heading-2"><span class="typing"></span></div>
-                            <div class="heading-secondary"><a href="/club-specific">View All Courses <i
-                                        class="uil uil-arrow-right button-icon"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide"
-                    style="background: url('assets/images/rang.jpg') no-repeat center; background-size: cover;">
-                    <div class="max-width">
-                        <div class="home-content">
-                            <div class="heading-2"><span class="typing"></span></div>
-                            <div class="heading-secondary"><a href="/club-specific">View All Courses <i
-                                        class="uil uil-arrow-right button-icon"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide"
-                    style="background: url('assets/images/home.jpg') no-repeat center; background-size: cover;">
-                    <div class="max-width">
-                        <div class="home-content">
-                            <div class="heading-2"><span class="typing"></span></div>
-                            <div class="heading-secondary"><a href="/club-specific">View All Courses <i
-                                        class="uil uil-arrow-right button-icon"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide"
-                    style="background: url('assets/images/home1.jpg') no-repeat center; background-size: cover;">
-                    <div class="max-width">
-                        <div class="home-content">
-                            <div class="heading-2"><span class="typing"></span></div>
-                            <div class="heading-secondary"><a href="/club-specific">View All Courses <i
-                                        class="uil uil-arrow-right button-icon"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
+  
+  <!-- ================== NAVBAR ================== -->
+  <%- include('./partials/navbar1.ejs') %>
+  
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row">
+        <div class="col-xl-6">
+          <h1>Institute Cultural Council</h1>
+          <a href="#about" class="btn-get-started scrollto">View Courses</a>
         </div>
-    </section>
-
-    <!-- CLUBS -->
-    <section class="courses" id="courses">
-        <div class="max-width">
-            <h2 class="title">All Clubs</h2>
-            <% for (let i=0; i<(clubs.length); i=i+2) {%>
-            <div class="row my-5 align-items-center justify-content-center">
-                <div class="col-8 col-lg-6 text-left">
-                    <h3 class="my-5"><%= clubs[i].name %></h3>
-                    <p class="fw-light"><%= clubs[i].description %></p>
-
-                    <h5 class="text-primary"><a href="/clubs/<%= clubs[i]._id %>">View Courses <i class="uil uil-arrow-right h5"></i></a></h5>
-                </div>
-                <div class="col-4 justify-content-center text-center align items center d-none d-md-block">
-                    <img src="assets/images/card1.jpg" alt="">
-                </div>
-            </div>
-            <% if(i+1<(clubs.length)) { %>
-            <div class="row my-5 align-items-center justify-content-center">
-                <div class="col-4 justify-content-center text-center align items center d-none d-md-block">
-                    <img src="assets/images/card2.jpg" alt="">
-                </div>
-                <div class="col-8 col-lg-6 text-left">
-                    <h3 class="my-5"><%= clubs[i+1].name %></h3>
-                    <p class="fw-light"><%= clubs[i+1].description %></p>
-
-                    <h5 class="text-primary"><a href="/clubs/<%= clubs[i+1]._id %>">View Courses <i class="uil uil-arrow-right h5"></i></a></h5>
-                </div>
-            </div>
-            <% } %>
-            <% } %>
+        <div class="col-xl-6">
+          <img src="https://drive.google.com/uc?id=16h4WZAFy4Ba1YIMn8oGbnW6OQJ2n-arb" alt="" style="width: 400px;">
         </div>
-    </section>
 
-    <!-- ================== FOOTER =================== -->
-    <%- include('./partials/footer.ejs') %>
+      </div>
+    </div>
+    
+  </section>
+  
+  <main id="main">
+    
+<!-- ======= Tabs Section ======= -->
 
-    <!-- SCROLL TOP -->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup_icon"></i>
-    </a>
 
-    <!-- SWIPER JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".swiper-container", {
-            effect: "coverflow",
-            speed: 1000,
-            grabCursor: true,
-            autoplay: {
-                delay: 5000,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            loop: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-        });
-    </script>
+<section id="tabs" class="tabs">
 
-    <%- include('./partials/js-includes.ejs') %>
+    
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>All Clubs</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+        </div>
+        
+      <div class="tab-content">
+        <% for (let i=0; i<(clubs.length); i=i+2) {%>
+
+          <div class="row mt-3 justify-content-center">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3><%= clubs[i].name %></h3>
+              <p class="fst-italic">
+                <%= clubs[i].description %>
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <img src="<%= clubs[i].thumbnail %>" alt="" class="img-fluid" style="height: 200px;">
+            </div>
+          </div>
+          <% if(i+1<(clubs.length)) { %>
+          <div class="row mt-3 justify-content-center">
+              <div class="col-lg-3 order-1 order-lg-2 text-center">
+                <img src="<%= clubs[i+1].thumbnail %>" alt="" class="img-fluid" style="height: 200px;">
+              </div>
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3><%= clubs[i+1].name %></h3>
+              <p class="fst-italic">
+                <%= clubs[i+1].description %>
+              </p>
+            </div>
+          </div>
+          <% } %>
+        <% } %>
+      </div>
+
+    </div>
+  </section>
+    
+  </main>
+  
+  <!-- ======= Footer ======= -->
+  <%- include('./partials/footer.ejs') %>
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets1/vendor/purecounter/purecounter.js"></script>
+  <script src="assets1/vendor/aos/aos.js"></script>
+  <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets1/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets1/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets1/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets1/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets1/js/main.js"></script>
 
 </body>
 
