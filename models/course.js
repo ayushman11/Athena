@@ -6,6 +6,9 @@ const courseSchema = new Schema({
         type: String,
         required: true,
     },
+    cover: {
+        type: String,
+    },
     authors: [{
         name: {
             type: String
@@ -14,9 +17,6 @@ const courseSchema = new Schema({
             type: String
         }
     }],
-    thumbnail: {
-        type: String
-    },
     short_description: {
         type: String,
         required: true,
@@ -34,14 +34,6 @@ const courseSchema = new Schema({
         description: {
             type: String,
         },
-        comments: [{
-            // author: {
-            //     type: String
-            // },
-            body: {
-                type: String
-            }
-        }],
     }],
 }, {timestamps: true});
 

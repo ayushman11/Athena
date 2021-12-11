@@ -13,7 +13,7 @@
           <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <img src="assets1/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src="<%= course.cover %>" class="testimonial-img" alt="">
                 <h3><a href="/course/<%= course._id %>"><%= course.title %></a></h3>
                 <h4>By <%= course.authors[0].name %></h4>
                 <p><%= course.short_description %></p>

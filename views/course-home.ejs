@@ -36,15 +36,12 @@
   <%- include('./partials/navbar1.ejs') %>
   
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero" class="d-flex align-items-center" style="background: url('<%= course.cover %>');">
     
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div class="row">
         <div class="col-xl-6">
           <h1><%= course.title %></h1>
-        </div>
-        <div class="col-xl-6">
-          <img src="https://drive.google.com/uc?id=16h4WZAFy4Ba1YIMn8oGbnW6OQJ2n-arb" alt="" style="width: 400px;">
         </div>
 
       </div>
@@ -66,13 +63,10 @@
             <div class="row my-4"> <% } %>
                 <div class="col-md-4">
                     <div class="card align-items-center text-center">
-                        <img class="my-2 card-img-top img-fluid" src="../assets/images/card1.jpg" alt="Card image cap">
+                        <img class="my-2 card-img-top img-fluid" src="<%= course.playlist[j].thumbnail %>" alt="Card image cap" style="height: 200px;">
                         <div class="card-body">
                             <h4 class="card-title"><a href="/course/<%= course._id %>/<%= course.playlist[j]._id %>"><%= course.playlist[j].title %></a></h4>
                             <p class="card-text"><%= course.playlist[j].description %></p>
-                            <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </p>
                         </div>
                     </div>
                 </div>
