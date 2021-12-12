@@ -22,10 +22,10 @@ const club_specific = async (req,res) => {
 const add_club = async (req,res) => {
 
     const club= new Club({
-        name: 'SilverScreen',
-        council: ['James Bond','Daniel Craig'],
-        thumbnail: "https://drive.google.com/uc?id=1vPpb8DAbSRX3Uck86kw8RC4TOgSThyCr",
-        description: 'Nullam elementum felis lectus, eu pellentesque nisi viverra vel. Sed a dignissim enim. Vivamus at turpis dolor.'
+        name: 'StyleUp',
+        council: [],
+        thumbnail: "https://drive.google.com/uc?id=1bIGkEPJ-Wp0g_hqAjdyYbxUAPs8e0Su5",
+        description: 'Fashion is a powerful form of self-expression. StyleUp, the Fashion Club of IIT Bombay helps you embody your best selves with its vibrant events, charismatic photoshoots, and sessions.'
     });
     
     club.save()
